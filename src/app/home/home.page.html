@@ -1,20 +1,179 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:250px;" id="mySidebar"><br>
+    <div class="w3-container">
+      <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <div class="d-flex justify-content-center">
+      <ng-lottie
+      *ngIf="change == 0"
+      height="250px"
+      width="170px"
+      [options]="optionsDeveloper"
+      (animationCreated)="initializeApp($event)"
+      ></ng-lottie>
+      <ng-lottie
+      height="250px"
+      width="170px"
+      *ngIf="change == 1"
+      [options]="optionsDeveloper2"
+      (animationCreated)="initializeApp($event)"
+      ></ng-lottie>
+      <ng-lottie
+      height="250px"
+      width="170px"
+      *ngIf="change == 2"
+      [options]="optionsDeveloper3"
+      (animationCreated)="initializeApp($event)"
+      ></ng-lottie>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      </div>
+      <div class="introduction">
+        <h4><b>Mohammed Sanan Ansari</b></h4>
+        <p>I am an innovative thinker with a passion for solving complex problems and a drive to constantly improve and push boundaries.</p>
+        
+      </div>
+     <!-- <p class="w3-text-grey">Template by W3.CSS</p> -->
+    </div>
+    <!-- <div class="w3-bar-block">
+      <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+    </div> -->
+    <div class="w3-panel w3-large d-flex">
+      <i>
+        <a href="https://www.linkedin.com/in/sanan-ansari-3624aa155/">
+          <ng-lottie
+          height="75px"
+          width="60px"
+          [options]="optionsLinkedIn"
+          (animationCreated)="initializelinks($event)"
+          ></ng-lottie>
+        </a>
+     
+      </i>
+      <i >
+        <a href="https://twitter.com/asannan822">
+      <ng-lottie
+      height="60px"
+      width="60px"
+      [options]="optionsTwitter"
+      (animationCreated)="initializelinks($event)"
+      ></ng-lottie></a>
+      </i>
+      <i class="fa fa-snapchat w3-hover-opacity">
+        <a href="https://github.com/sannanansari">
+          <ng-lottie
+          height="60px"
+          width="60px"
+          [options]="optionsGithub"
+          (animationCreated)="initializelinks($event)"
+          ></ng-lottie>
+        </a>
+     
+      </i>
+    </div>
+  </nav>
+
+
+
+  <div class="w3-main" style="margin-left:250px">
+
+    <header id="portfolio">
+      <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+      <div class="w3-container">
+      <h1 class="introduction"><b>My Portfolio</b></h1>
+      </div>
+    </header>
+    
+  
+    <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+      <h4 class="introduction"><b>Allow Me to Introduce Myself</b></h4>
+      <p class="introduction">
+        An High-spirited Software Developer passout of batch 2020 from <a href="https://aiktc.ac.in/">@AIKTC</a> currently working on full-stack web developer.
+         I am skilled in designing and implementing efficient and effective solutions to complex problems. 
+         My primary focus is to deliver high-quality software that meets the needs of users and clients.
+          I am always learning and staying up-to-date with the latest technologies and industry trends to ensure the best outcomes for my projects.
+          
+        </p>
+        <p class="introduction">
+          Previously, I worked at companies like <a href="http://theschnellapps.com/">theSchnell Apps pvt ltd</a> & InventersCorp as a Intern Where I learn various technology like data mining and arduino. 
+          Developed interest in various field to pursue development as a career.
+        </p>
+        <p class="introduction">
+          📚 I also love reading books from fictional to non fictional books. My favorite ones are A Thousand Splendid Suns by Khaled Hosseini in the genre of personal development and Man's Search for Meaning by Viktor Frankl in the genre of personal development and countless other like Kite Runner, Norwegian Wood(Amazing), The Alchemist and many more.
+        </p>
+
+        <p class="introduction">
+          See my Writings <a href="https://medium.com/@asannan822">Medium</a>
+        </p>
+      <hr>
+
+      <!-- <div  class="introduction">
+        <h4>Education</h4>
+        <p>Problem Solving</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
+        </div>
+        <p>Github</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:90%">90%</div>
+        </div>
+        <p>Angular</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:90%">90%</div>
+        </div>
+        <p>Spring Boot</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
+        </div>
+        <p>Ionic</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">75%</div>
+        </div>
+        <p>
+          <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+            <i class="fa fa-download w3-margin-right"></i>Download Resume
+          </button>
+        </p>
+        <hr>
+      </div> -->
+
+
+      <div class="introduction">
+        <h4>Technical Skills</h4>
+        <p>Problem Solving</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
+        </div>
+        <p>Github</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:90%">90%</div>
+        </div>
+        <p>Angular</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:90%">90%</div>
+        </div>
+        <p>Spring Boot</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
+        </div>
+        <p>Ionic</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">75%</div>
+        </div>
+        <!-- <p>
+          <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+            <i class="fa fa-download w3-margin-right"></i>Download Resume
+          </button>
+        </p> -->
+        <hr>
+      </div>
+   
+
+      
+    </div>
+    
   </div>
 </ion-content>

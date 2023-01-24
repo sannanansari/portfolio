@@ -6,11 +6,19 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
+import { LottieModule } from 'ngx-lottie';
+import LottiePlayer from 'lottie-web';
+
+export function playerFactory() {
+  return LottiePlayer;
+}
+
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,LottieModule.forRoot({ player: playerFactory }),],
+  providers: [LottieSplashScreen,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
